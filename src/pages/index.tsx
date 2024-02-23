@@ -13,11 +13,13 @@ import {
   Text
 } from "@mantine/core";
 
+const openAiAPI = process.env.NEXT_PUBLIC_OPENAI_API_KEY
+
 export default function Home() {
   const [question, setQuestion] = useState("");
   const [allAnswers, setAllAnswer] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
-  const openAiAPI = "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";
+  
 
   const handleQuestionChange = (e: any) => {
     setQuestion(e.target.value);
